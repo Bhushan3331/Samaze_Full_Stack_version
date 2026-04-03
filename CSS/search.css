@@ -1,0 +1,209 @@
+/* ========================== */
+/* SEARCH PAGE MAIN LAYOUT */
+/* ========================== */
+
+.search-page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ========================== */
+/* SEARCH BAR */
+/* ========================== */
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 30px;
+    border: 1px solid #e6ecf0;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#searchInput:focus {
+    border-color: #1da1f2;
+    box-shadow: 0 0 0 2px rgba(29,161,242,0.1);
+}
+
+#searchBtn {
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    background: #1da1f2;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#searchBtn:hover {
+    background: #0d8ddb;
+}
+
+/* ========================== */
+/* TOGGLE BUTTONS */
+/* ========================== */
+
+.search-toggle {
+    display: flex;
+    border-bottom: 1px solid #e6ecf0;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 12px 0;
+    background: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    color: #657786;
+    transition: 0.2s;
+}
+
+.toggle-btn.active {
+    color: #000;
+}
+
+.toggle-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: #1da1f2;
+    border-radius: 10px;
+}
+
+/* ========================== */
+/* EMPTY STATE */
+/* ========================== */
+
+.search-empty {
+    text-align: center;
+    margin-top: 40px;
+    color: #657786;
+}
+
+.search-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* ========================== */
+/* RESULTS CONTAINER */
+/* ========================== */
+
+#searchResults {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================== */
+/* USER CARD (X STYLE) */
+/* ========================== */
+
+.search-user-card {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e6ecf0;
+    background: #fff;
+    transition: background 0.2s;
+}
+
+.search-user-card:hover {
+    background: #f7f9f9;
+}
+
+.search-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.search-user-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.search-username {
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.search-handle {
+    font-size: 13px;
+    color: #657786;
+}
+
+.search-bio {
+    font-size: 14px;
+    color: #333;
+    margin-top: 4px;
+}
+
+/* Follow button modern */
+.follow-btn {
+    align-self: center;
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 1px solid #1da1f2;
+    background: #1da1f2;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.follow-btn:hover {
+    background: #0d8ddb;
+}
+
+/* ========================== */
+/* POST CARD (Reddit/X hybrid) */
+/* ========================== */
+
+.search-post-card {
+    padding: 15px 0;
+    border-bottom: 1px solid #e6ecf0;
+    background: #fff;
+    transition: background 0.2s;
+}
+
+.search-post-card:hover {
+    background: #f7f9f9;
+}
+
+.search-post-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.search-post-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+.search-post-card img {
+    width: 100%;
+    border-radius: 16px;
+    margin-top: 8px;
+    max-height: 400px;
+    object-fit: cover;
+}

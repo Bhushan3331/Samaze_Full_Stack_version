@@ -1,0 +1,126 @@
+/* ============================= */
+/* TRENDING PAGE LAYOUT */
+/* ============================= */
+
+.trending-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ============================= */
+/* TRENDING CONTAINER */
+/* ============================= */
+
+.trending-posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ============================= */
+/* TRENDING POST CARD */
+/* ============================= */
+
+.trending-posts-container .post-card {
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid #e6ecf0;
+    background: #ffffff;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.trending-posts-container .post-card:hover {
+    background: #f7f9f9;
+    transform: translateY(-2px);
+}
+
+/* Top 1 special highlight */
+.trending-posts-container .post-card:first-child {
+    border: 2px solid #1da1f2;
+    background: linear-gradient(to right, #ffffff, #f0f8ff);
+}
+
+/* ============================= */
+/* HEADER INSIDE CARD */
+/* ============================= */
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.post-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-username {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.post-handle {
+    font-size: 13px;
+    color: #657786;
+}
+
+/* ============================= */
+/* POST CONTENT */
+/* ============================= */
+
+.post-card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.post-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* ============================= */
+/* IMAGE */
+/* ============================= */
+
+.post-image {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 14px;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* ============================= */
+/* TRENDING RANK BADGE */
+/* ============================= */
+
+.post-card::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1000px) {
+    .trending-page {
+        padding: 15px;
+    }
+}

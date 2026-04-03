@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Samaze Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/profile.css">
+    <link rel="stylesheet" href="CSS/notification.css">
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="CSS/trending.css">
+    <link rel="stylesheet" href="CSS/bookmark.css">
+    <link rel="stylesheet" href="CSS/policy.css">
+    
+</head>
+<body>
+<div class="layout">
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+        <h2 class="logo"><span style="color:#1da1f2;">S</span>AMAZE</h2>
+        <div id="sidebarusername" style="text-align:center; margin-bottom:15px; font-weight:bold; color:#4e73df;"></div>
+        <ul class="menu">
+            <li id="sidebar-home" class="active">🏠 Home</li>
+            <li id="sidebar-search">🔍 Search</li>
+            <li id="sidebar-trending">🔥 Trending</li>
+            <li id="sidebar-notifications">🔔 Notifications
+                <span id="notificationCount" class="notification-badge">0</span>
+            </li>
+            <li id="sidebar-bookmark">📌 Bookmarks</li>
+            <li id="sidebar-profile">👤 Profile</li>
+            <li id="sidebar-settings">⚙ Settings</li>
+            <li id="logout">🚪 Logout</li>
+        </ul>
+        <button id="sidebar-post" type="button" class="sidebar-post-btn">Post</button>
+    </div>
+    <!-- MIDDLE CONTENT -->
+    <div class="feed" id="mainContent">
+        <!-- Posts will render here -->
+        <div id="homePostsContainer"></div>
+    </div>
+</div>
+
+<!-- POST MODAL -->
+<div id="postModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Create Post</h3>
+            <span class="close-btn">×</span>
+        </div>
+        <form id="postForm">
+            <input type="text" id="postTitle" placeholder="Title">
+            <textarea id="postContent" placeholder="What's happening?"></textarea>
+            <input type="file" id="postImage" name="images" accept="image/*" multiple> 
+           <div id="imagePreview" style="display:none; margin-top:10px;"></div>
+            <button type="submit">Post</button>
+        </form>
+    </div>
+</div>
+
+<div id="confirmModal" class="confirm-modal">
+    <div class="confirm-box">
+
+        <h3 id="confirmTitle">Confirm Action</h3>
+
+        <p id="confirmMessage">
+            Are you sure you want to continue?
+        </p>
+
+        <div class="confirm-actions">
+            <button id="confirmCancel">Cancel</button>
+            <button id="confirmOk">Confirm</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- REPORT MODAL -->
+<div id="reportModal" class="modal">
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h3>Report Post</h3>
+        </div>
+
+        <textarea 
+            id="reportReason" 
+            class="textarea-field"
+            placeholder="Why are you reporting this post?">
+        </textarea>
+        <div class="modal-actions">
+            <button id="cancelReportBtn" class="cancel-btn">Cancel</button>
+            <button id="submitReportBtn" class="post-btn">Submit Report</button>
+        </div>
+    </div>
+</div>
+<!-- SUCCESS MESSAGE MODAL -->
+<div id="successModal" class="confirm-modal">
+    <div class="confirm-box">
+        <h3 id="successTitle">Success</h3>
+        <p id="successMessage">
+            Action completed successfully.
+        </p>
+        <div class="confirm-actions">
+            <button id="successOk">OK</button>
+        </div>
+    </div>
+</div>
+<!-- SCRIPT -->
+<script src="JS/home.js"></script>
+<script src="JS/postRenderer.js"></script>
+</body>
+</html>

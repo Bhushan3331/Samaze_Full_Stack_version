@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #e9edf2;
+}
+
+/* Center container */
+.settings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card */
+.settings-card {
+    width: 500px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* Header */
+.settings-header {
+    padding: 25px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.settings-header h2 {
+    margin: 0;
+    font-size: 26px;
+    color: #333;
+}
+
+.settings-header p {
+    margin-top: 8px;
+    color: #777;
+    font-size: 15px;
+}
+
+/* Body */
+.settings-body {
+    padding: 20px 25px;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.settings-item:hover {
+    background-color: #f5f7fa;
+}
+
+.arrow {
+    font-size: 20px;
+    color: #999;
+}
+
+/* Logout red */
+.logout {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+/* Footer */
+.settings-footer {
+    text-align: center;
+    padding: 18px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #fafafa;
+}
+
+.settings-footer a {
+    text-decoration: none;
+    color: #2f6db5;
+    font-size: 15px;
+}
+
+.settings-footer a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    margin: 0 15px;
+    color: #bbb;
+}
+/* ============================= */
+/* CLICKABLE CURSOR FOR UI      */
+/* ============================= */
+
+/* Sidebar items */
+.menu li {
+    cursor: pointer;
+}
+
+/* Posts */
+.post {
+    cursor: pointer;
+}
+
+/* Notification items */
+.notification-item {
+    cursor: pointer;
+}
+
+/* Buttons */
+button,
+.sidebar-post-btn,
+.post-btn {
+    cursor: pointer;
+}
+
+/* Close button */
+.close-btn {
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* TEXT INPUT CURSOR            */
+/* ============================= */
+
+input,
+textarea {
+    cursor: text;
+}

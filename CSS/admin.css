@@ -1,0 +1,231 @@
+/* ===== GLOBAL ===== */
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f6fb;
+color:#333;
+}
+
+.admin-container{
+width:95%;
+max-width:1300px;
+margin:auto;
+padding:30px;
+}
+
+
+/* ===== HEADER ===== */
+
+.header{
+text-align:center;
+margin-bottom:40px;
+}
+
+.header h1{
+margin:0;
+font-size:34px;
+color:#111827;
+}
+
+.sub{
+color:#6b7280;
+margin-top:6px;
+font-size:14px;
+}
+
+
+/* ===== STATS DASHBOARD ===== */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-bottom:40px;
+}
+
+.stat-card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+text-align:center;
+transition:0.25s;
+}
+
+.stat-card:hover{
+transform:translateY(-5px);
+}
+
+.stat-card h3{
+margin:0;
+font-size:17px;
+color:#555;
+}
+
+.stat-card p{
+font-size:36px;
+font-weight:bold;
+margin-top:12px;
+}
+
+/* card colors */
+
+.users{
+border-top:5px solid #3b82f6;
+}
+
+.posts{
+border-top:5px solid #9333ea;
+}
+
+.month{
+border-top:5px solid #16a34a;
+}
+
+
+
+/* ===== PANELS ===== */
+
+.panel{
+background:white;
+padding:25px;
+margin-bottom:35px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.panel h2{
+margin-bottom:20px;
+font-size:22px;
+color:#111827;
+}
+
+
+
+/* ===== TABLE WRAPPER ===== */
+
+.table-wrapper{
+overflow-x:auto;
+}
+
+
+
+/* ===== TABLES ===== */
+
+table{
+width:100%;
+border-collapse:collapse;
+font-size:14px;
+}
+
+thead{
+background:#111827;
+color:white;
+}
+
+th{
+padding:14px;
+text-align:left;
+font-weight:600;
+}
+
+td{
+padding:14px;
+border-bottom:1px solid #eee;
+vertical-align:middle;
+}
+
+tr:hover{
+background:#f3f4f6;
+}
+
+
+
+/* ===== USER CELL ===== */
+
+.user-cell{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.avatar{
+width:34px;
+height:34px;
+border-radius:50%;
+object-fit:cover;
+}
+
+
+
+/* ===== POST PREVIEW ===== */
+
+.post-preview{
+max-width:300px;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+color:#444;
+}
+
+
+
+/* ===== REPORT REASON ===== */
+
+.reason{
+background:#fee2e2;
+color:#b91c1c;
+padding:4px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+}
+
+
+
+/* ===== BUTTONS ===== */
+
+button{
+padding:6px 14px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+font-size:13px;
+margin-right:5px;
+}
+
+.resolveBtn{
+background:#22c55e;
+color:white;
+}
+
+.deleteBtn{
+background:#ef4444;
+color:white;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+.stats{
+grid-template-columns:1fr;
+}
+
+th, td{
+padding:10px;
+}
+
+.header h1{
+font-size:28px;
+}
+
+}

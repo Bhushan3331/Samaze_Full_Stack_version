@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7f6;
+}
+
+.post-container {
+    width: 600px;
+    margin: 30px auto;
+}
+
+.back {
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.main-post {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.handle {
+    font-size: 13px;
+    color: gray;
+}
+
+.post-content {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.post-stats {
+    margin-top: 15px;
+    color: gray;
+    font-size: 14px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    color: gray;
+}
+
+.comment-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.comment-box input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.comment-box button {
+    background: #1a8f6f;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.comment {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    color: gray;
+}
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.back-btn:hover {
+    background-color: #f0f2f5;
+}
+/* ============================= */
+/* CLICKABLE CURSOR FOR UI      */
+/* ============================= */
+
+/* Sidebar items */
+.menu li {
+    cursor: pointer;
+}
+
+/* Posts */
+.post {
+    cursor: pointer;
+}
+
+/* Notification items */
+.notification-item {
+    cursor: pointer;
+}
+
+/* Buttons */
+button,
+.sidebar-post-btn,
+.post-btn {
+    cursor: pointer;
+}
+
+/* Close button */
+.close-btn {
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* TEXT INPUT CURSOR            */
+/* ============================= */
+
+input,
+textarea {
+    cursor: text;
+}

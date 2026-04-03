@@ -1,0 +1,776 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body { background: #f5f8fa; }
+
+/* ===== LAYOUT ===== */
+.layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px 15px;
+    border-right: 1px solid #e6ecf0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.feed {
+    width: 900px;
+    background: #fff;
+    border-right: 1px solid #e6ecf0;
+}
+
+/* ===== SIDEBAR ===== */
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.menu li:hover,
+.menu li.active {
+    background: #e8f5f3;
+}
+
+.menu li.active { color: #1da1f2; }
+
+.sidebar-post-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 30px;
+    background: #1da1f2;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sidebar-post-btn:hover { background: #0d8ddb; }
+
+/* ===== TABS ===== */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    font-weight: bold;
+    border-bottom: 1px solid #e6ecf0;
+}
+
+.tabs span {
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.tabs .active-tab {
+    border-bottom: 3px solid #1da1f2;
+}
+
+/* ===== POSTS ===== */
+.post {
+    padding: 20px;
+    border-bottom: 1px solid #e6ecf0;
+    cursor: pointer;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-text {
+    margin: 10px 0;
+    cursor: text;
+}
+
+.post-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.post-actions span {
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.post-actions span:hover {
+    background: #e8f5f3;
+    color: #1da1f2;
+}
+
+/* ===== NOTIFICATIONS ===== */
+.feed-title {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #e6ecf0;
+}
+
+.notification {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e6ecf0;
+    cursor: pointer;
+}
+
+.notification .time {
+    font-size: 12px;
+    color: gray;
+    margin-top: 4px;
+}
+
+.notif-badge {
+    background: red;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 500px;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.close-btn { cursor: pointer; }
+
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.textarea-field {
+    height: 150px;
+    resize: none;
+}
+
+.word-count {
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.post-btn {
+    width: 100%;
+    padding: 10px;
+    background: #1da1f2;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.post-btn:hover { background: #0d8ddb; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+    .sidebar { display: none; }
+    .layout { justify-content: center; }
+    .feed { width: 100%; }
+}
+/* ===================================== */
+/* 🔥 MIDDLE FEED IMPROVED UI ONLY */
+/* ===================================== */
+
+/* Feed width cleaner */
+.feed {
+    width: 720px;
+    margin: 0 auto;
+    background: #fff;
+    border-left: 1px solid #e6ecf0;
+    border-right: 1px solid #e6ecf0;
+}
+
+/* Post container */
+.post-card {
+    padding: 18px 20px;
+    border-bottom: 1px solid #e6ecf0;
+    transition: background 0.2s ease;
+}
+
+.post-card:hover {
+    background-color: #f7f9f9;
+}
+
+/* Header layout */
+.post-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/* Avatar */
+.post-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Username + handle stacked */
+.post-user {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Username bold */
+.username {
+    font-weight: 700;
+    font-size: 15px;
+    color: #14171a;
+}
+
+/* Handle subtle */
+.handle {
+    font-size: 13px;
+    color: #657786;
+}
+
+/* Post title */
+.post-card h3 {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Post content */
+.post-card p {
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #14171a;
+}
+
+/* Image styling improved */
+.post-image {
+    margin-top: 12px;
+    width: 100%;
+    border-radius: 16px;
+    max-height: 520px;
+    object-fit: cover;
+}
+
+/* Action buttons row */
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 14px;
+}
+
+/* Buttons styling */
+.post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #657786;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s ease;
+}
+
+/* Hover effect */
+.post-actions button:hover {
+    color: #1da1f2;
+}
+
+/* Liked state */
+.like-btn.liked {
+    color: #e0245e;
+}
+
+/* Delete icon modern look */
+.delete-btn {
+    margin-left: auto;
+    font-size: 16px;
+    color: #657786;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+.comment-section.active {
+    max-height: 500px;
+    margin-top: 12px;
+}
+
+/* ============================= */
+/* COMMENT BOX STYLE */
+/* ============================= */
+.comment-item {
+    background: #f0f2f5;
+    padding: 8px 12px;
+    border-radius: 16px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* ============================= */
+/* COMMENT INPUT */
+/* ============================= */
+.comment-input {
+    display: flex;
+    margin-top: 8px;
+    gap: 8px;
+}
+
+.comment-input input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.comment-input button {
+    border: none;
+    background: #1da1f2;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.comment-input button:hover {
+    background: #0d8ddb;
+}
+
+/* ============================= */
+/* INSTAGRAM STYLE 3 DOT */
+/* ============================= */
+.more-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #657786;
+    padding: 4px 8px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.more-btn:hover {
+    background: #f0f2f5;
+}
+/* ============================= */
+/* COMMENT SECTION */
+/* ============================= */
+
+.comment-section {
+    display: none;
+    padding: 8px;
+    margin-top: 8px;
+    border-top: 1px solid #ddd;
+    min-height: 50px; /* ensures visible even if empty */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================= */
+/* INDIVIDUAL COMMENT */
+/* ============================= */
+
+.comment-item {
+    display: flex;
+    justify-content: space-between; /* Push delete button to right */
+    align-items: center;
+    padding: 6px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+
+.comment-left {
+    display: flex;
+    gap: 6px; /* space between username and text */
+}
+
+.comment-username {
+    font-weight: bold;
+}
+
+.comment-text {
+    color: #333;
+}
+
+.comment-delete-btn {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.comment-item b {
+    margin-right: 6px;
+}
+
+/* Username */
+.comment-username {
+    font-weight: 600;
+    color: #000;
+}
+/* Comment text */
+.comment-text {
+    color: #333;
+}
+
+/* Delete button */
+.delete-comment-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #999;
+    transition: 0.2s ease;
+}
+
+.delete-comment-btn:hover {
+    color: #ff4d4f;
+    transform: scale(1.1);
+}
+
+/* ============================= */
+/* COMMENT INPUT */
+/* ============================= */
+
+.comment-input {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+}
+
+.comment-input:focus {
+    border-color: #1da1f2;
+}
+
+/* Send button */
+.comment-section button {
+    margin-top: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    background: #1da1f2;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.comment-section button:hover {
+    background: #0d8ddb;
+}
+/* ============================= */
+/* POST MODAL BACKGROUND */
+/* ============================= */
+
+.modal {
+    display: none; /* JS controls this */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================= */
+/* MODAL CONTENT BOX */
+/* ============================= */
+
+.modal-content {
+    background: #ffffff;
+    width: 95%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    animation: popupFade 0.25s ease;
+}
+
+@keyframes popupFade {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ============================= */
+/* MODAL HEADER */
+/* ============================= */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Close button */
+.close-btn {
+    font-size: 22px;
+    cursor: pointer;
+    color: #888;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #ff4d4f;
+}
+
+/* ============================= */
+/* FORM FIELDS */
+/* ============================= */
+
+#postForm input,
+#postForm textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#postForm textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+#postForm input:focus,
+#postForm textarea:focus {
+    border-color: #1da1f2;
+}
+
+/* Submit button */
+#postForm button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background: #1da1f2;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#postForm button:hover {
+    background: #0d8ddb;
+}
+/* ============================= */
+/* CONFIRM MODAL */
+/* ============================= */
+
+#confirmModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.confirm-box{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+}
+
+.confirm-box h3{
+    margin-bottom: 10px;
+}
+
+.confirm-box p{
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.confirm-actions{
+    display: flex;
+    gap: 10px;
+}
+
+.confirm-actions button{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Cancel */
+#confirmCancel{
+    background: #ccc;
+}
+
+/* Confirm */
+#confirmOk{
+    background: #e0245e;
+    color: white;
+}
+
+#confirmCancel:hover{
+    background: #bdbdbd;
+}
+
+#confirmOk:hover{
+    background: #c81e4f;
+}
+/* ============================= */
+/* REPORT MODAL TEXTAREA */
+/* ============================= */
+
+#reportReason{
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    resize:none;
+    min-height:120px;
+    margin-bottom:12px;
+}
+
+#submitReportBtn{
+    width:100%;
+}
+.modal-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+    margin-top:15px;
+}
+
+.cancel-btn{
+    padding:8px 15px;
+    border:none;
+    background:#ddd;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.cancel-btn:hover{
+    background:#ccc;
+}
+#successModal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+}
+.notification-item{
+    position: relative;
+}
+
+.notification-badge{
+    background: red;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: 6px;
+    display: none;
+}

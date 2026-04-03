@@ -1,0 +1,114 @@
+<div class="profile-container">
+
+    <!-- Cover Photo -->
+    <div class="cover-photo" style="background-color:#1da1f2; height:150px; border-radius:10px 10px 0 0;"></div>
+
+    <!-- Profile Picture -->
+    <div class="profile-picture" id="profilePicture" style="
+        width:120px; 
+        height:120px; 
+        border-radius:50%; 
+        background-color:#ccc; 
+        border:4px solid white; 
+        margin:-60px auto 10px;
+        background-size: cover;
+        background-position: center;
+    "></div>
+
+    <!-- VIEW MODE -->
+    <div id="profileViewSection" style="text-align:center; padding:0 20px;">
+
+        <!-- Profile Info -->
+        <div class="profile-info" style="margin-bottom:15px;">
+            <h2 id="profileUsername" style="margin:5px 0; font-size:1.8em;">Loading...</h2>
+            <p id="profileHandle" class="handle" style="color:gray; margin:3px 0;"></p>
+            <p id="profileBio" class="bio" style="font-style:italic; color:#555; margin:5px 0;"></p>
+        </div>
+
+        <!-- Stats -->
+        <div class="profile-stats" style="display:flex; justify-content:center; gap:25px; margin-bottom:15px;">
+            <div><span id="postCount">0</span><br><small>Posts</small></div>
+            <div><span id="followersCount">0</span><br><small>Followers</small></div>
+            <div><span id="followingCount">0</span><br><small>Following</small></div>
+        </div>
+
+        <!-- Buttons -->
+        <div style="display:flex; justify-content:center; gap:10px; margin-bottom:20px;">
+            <button class="edit-btn" id="editProfileBtn" style="padding:8px 16px; border:none; border-radius:5px; background-color:#1da1f2; color:white; cursor:pointer;">Edit Profile</button>
+            <button id="followBtn" style="padding:8px 16px; border:none; border-radius:5px; background-color:#4caf50; color:white; cursor:pointer;">Follow</button>
+            <button id="unfollowBtn" style="padding:8px 16px; border:none; border-radius:5px; background-color:#f44336; color:white; cursor:pointer;">Unfollow</button>
+        </div>
+
+    </div>
+
+    <!-- EDIT MODE -->
+    <div id="profileEditSection" style="display:none; padding:0 20px; text-align:center;">
+
+        <input 
+            id="editUsername" 
+            type="text" 
+            placeholder="Username"
+            maxlength="30"
+            style="width:90%; padding:8px; margin:5px 0; border-radius:5px; border:1px solid #ccc;"
+        >
+
+        <input 
+            id="editHandle" 
+            type="text" 
+            placeholder="Handle (unique)"
+            maxlength="30"
+            style="width:90%; padding:8px; margin:5px 0; border-radius:5px; border:1px solid #ccc;"
+        >
+
+        <small id="handleStatus" style="display:block; margin-bottom:5px; color:gray;"></small>
+
+        <textarea 
+            id="editBio" 
+            placeholder="Bio"
+            maxlength="150"
+            style="width:90%; padding:8px; margin:5px 0; border-radius:5px; border:1px solid #ccc; resize:none;"
+        ></textarea>
+
+        <!-- Profile Image Upload -->
+        <div style="margin:10px 0;">
+            <input type="file" id="editProfileImage" accept="image/*" style="display:block; margin:0 auto;">
+            <img id="profileImagePreview" style="display:none; width:100px; height:100px; border-radius:50%; margin-top:10px; object-fit:cover; border:2px solid #1da1f2;">
+        </div>
+
+        <button id="saveProfileBtn" style="
+            padding:8px 16px; 
+            border:none; 
+            border-radius:5px; 
+            background-color:#1da1f2; 
+            color:white; 
+            cursor:pointer;
+            margin-top:10px;
+        ">
+            Save Changes
+        </button>
+
+       <button id="cancelProfileBtn">Cancel</button>
+
+    </div>
+
+    <!-- POSTS -->
+    <div class="posts" id="postsContainer" style="padding:0 20px; margin-top:20px;"></div>
+
+</div>
+
+<style>
+    /* Optional: Hover effects */
+    .edit-btn:hover, #saveProfileBtn:hover, #followBtn:hover, #unfollowBtn:hover {
+        opacity: 0.85;
+    }
+
+    .post-card {
+        border:1px solid #ccc;
+        border-radius:5px;
+        padding:10px;
+        margin-bottom:10px;
+        background-color:#fafafa;
+    }
+</style>
+<script src="/JS/profile.js"></script>
+<script src="/JS/follow.js"></script>

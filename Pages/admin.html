@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>SAMAZE Admin Dashboard</title>
+<link rel="stylesheet" href="/CSS/admin.css">
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<header class="header">
+<h1>Admin Dashboard</h1>
+<p class="sub">SAMAZE Platform Control Panel</p>
+</header>
+
+
+<!-- ===== DASHBOARD STATS ===== -->
+
+<section class="stats">
+
+<div class="stat-card users">
+<h3>Total Users</h3>
+<p id="totalUsers">0</p>
+</div>
+
+<div class="stat-card posts">
+<h3>Total Posts</h3>
+<p id="totalPostsAll">0</p>
+</div>
+
+<div class="stat-card month">
+<h3>Posts This Month</h3>
+<p id="totalPosts">0</p>
+</div>
+
+</section>
+
+
+
+<!-- ===== USER ACTIVITY ===== -->
+
+<section class="panel">
+
+<h2>User Activity</h2>
+
+<div class="table-wrapper">
+
+<table class="users-table">
+
+<thead>
+<tr>
+<th>User</th>
+<th>Posts</th>
+<th>Followers</th>
+<th>Following</th>
+</tr>
+</thead>
+
+<tbody id="usersStats"></tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+
+<!-- ===== REPORTED POSTS ===== -->
+
+<section class="panel">
+
+<h2>Reported Posts Moderation</h2>
+
+<div class="table-wrapper">
+
+<table class="reported-table">
+
+<thead>
+<tr>
+<th>User</th>
+<th>Content</th>
+<th>Reason</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="reportedPostsBody"></tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+</div>
+
+<script src="/JS/admin.js"></script>
+
+</body>
+</html>

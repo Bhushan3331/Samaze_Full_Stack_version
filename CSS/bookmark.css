@@ -1,0 +1,157 @@
+/* ============================= */
+/* BOOKMARK PAGE STYLING - PRO */
+/* ============================= */
+
+#bookmarkMiddle {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 24px;
+    background-color: #fff;
+}
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.feed-title {
+    font-size: 24px;
+    font-weight: 800;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e6ecf0;
+    margin-bottom: 20px;
+    letter-spacing: -0.3px;
+}
+
+/* ============================= */
+/* POST CARD */
+/* ============================= */
+
+.post {
+    padding: 18px;
+    border: 1px solid #e6ecf0;
+    border-radius: 18px;
+    background-color: #fff;
+    transition: all 0.25s ease;
+}
+
+.post:hover {
+    background-color: #f9fafb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.post-header img.post-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-header strong {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.post-header p {
+    font-size: 12px;
+    color: #657786;
+    margin: 2px 0 0 0;
+}
+
+/* ============================= */
+/* POST TEXT */
+/* ============================= */
+
+.post-text h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.post-text p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* ============================= */
+/* IMAGE */
+/* ============================= */
+
+.post-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-top: 12px;
+}
+
+/* ============================= */
+/* ACTION BUTTONS */
+/* ============================= */
+
+.post-actions {
+    display: flex;
+    gap: 18px;
+    margin-top: 14px;
+}
+
+.post-actions span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #657786;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover like Instagram */
+.post-actions span:hover {
+    color: #1da1f2;
+    transform: scale(1.05);
+}
+
+/* Optional remove style */
+.post-actions .remove-bookmark:hover {
+    color: #ff4d4f;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1000px) {
+    #bookmarkMiddle {
+        padding: 14px;
+    }
+
+    .post {
+        padding: 14px;
+    }
+
+    .post-text h3 {
+        font-size: 16px;
+    }
+
+    .post-text p {
+        font-size: 13px;
+    }
+
+    .post-image {
+        max-height: 300px;
+    }
+}
